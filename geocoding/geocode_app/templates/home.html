@@ -1,0 +1,36 @@
+<html>
+  <head>
+
+    <title> Super Geocoder</title>
+    <h3>
+      <Center>Super Geocoder </Center>
+    </h3>
+    <style>
+  body {
+    background-color: lightblue;
+  }
+
+  h3 {
+    color: white;
+    text-align: center;
+  }
+
+  Center {
+    font-family: verdana;
+    font-size: 20px;
+  }
+  </style>
+  </head>
+  <body>
+    <br>
+    <Center> Please upload your csv file <Center>
+    </br>
+    <br>
+    <form method="post" action = {% url 'data' %} enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="file" name="myfile">
+      <button type="submit">Submit</button>
+    </br>
+    </form>
+  </body>
+</html>
